@@ -1,0 +1,43 @@
+1) Installing Virtualbox:
+
+$ sudo apt-get install virtualbox
+			OR
+install virtualbox 5.0 form package manager
+
+2) Installing Vagrant:
+
+$ sudo apt-get install vagrant
+		OR
+download deb file from https://www.vagrantup.com/downloads.html  select Debian 64/32 and install in your linux machin
+		OR
+install vagrant_1.8.5_i686.deb form package manager 
+------------------------------------------------------------------------------------------------------------
+##=> it is optional command if you are not installing virtualbox form pacakeg manager .
+
+Install the dkms package to ensure that the VirtualBox host kernel modules (vboxdrv, vboxnetflt and vboxnetadp) are properly updated if the Linux kernel version changes during the next apt-get upgrade.
+
+3) $ sudo apt-get install virtualbox-dkms
+
+-------------------------------------------------------------------------------------------------------------
+
+4) Getting vagrant  machine up:
+
+Vagrant can quickly deploy the development environment. Get the vagrant images from here. The following command will install precise32 box from the vagrant website. A box is nothing more then a specially packaged image that can later be used to provision a server.
+
+$ vagrant box add precise32 http://files.vagrantup.com/precise32.box
+
+
+5) Configure Project:
+
+Create a root directory for your Project. Then create a vagrant file in this folder by calling 'vagrant init', which will be the central file for the project configuration.
+
+$ mkdir vagrant_project
+$ cd vagrant_project
+$ vagrant init
+
+Edit the Vagrantfile in this directory and replace
+
+config.vm.box = "precise32"
+
+
+6) vagrant ssh #=> to connect ubuntu LTS 
